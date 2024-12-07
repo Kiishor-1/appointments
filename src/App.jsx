@@ -48,8 +48,8 @@ export function App() {
 
   return (
     <div className="app relative container mx-auto mt-3 front-thin w-100 px-4" id="App">
-      <h1 className="sticky top-0 bg-white md:text-5xl text-3xl flex items-center gap-2 my-3 py-4 z-[4] rop-shadow-[16px_16px_5px_gray]">
-        <BiCalendar className="inline-block text-red-400 align-top md:block hidden" />
+      <h1 className="sticky top-0 bg-white md:text-5xl text-2xl flex items-center gap-2 my-3 py-4 z-[4] rop-shadow-[16px_16px_5px_gray]">
+        <BiCalendar className="inline-block text-red-400 align-top" />
         Your Appointments
       </h1>
 
