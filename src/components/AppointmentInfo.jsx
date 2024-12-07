@@ -1,46 +1,10 @@
-
-// import React from "react";
-// import { BiTrash } from "react-icons/bi";
-
-// const AppointmentImfo = ({ appointments, onDeleteAppointment }) => {
-//     return (
-//         <li className="px-3 py-3 flex items-start">
-//             <button
-//                 type="button"
-//                 onClick={() => onDeleteAppointment(appointments.id)}
-//                 className="p-1.5 mr-2 mt-1 rounded text-white bg-red-400 hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
-//             >
-//                 <BiTrash />
-//             </button>
-//             <div className="flex-grow flex flex-col gap-1">
-//                 <span className="flex-grow text-sm font-bold text-blue-500">
-//                     {appointments.petName}
-//                 </span>
-//                 <span className="text-sm text-gray-700">Owner: {appointments.ownerName}</span>
-//                 <p className="text-sm mt-2 text-gray-600">{appointments.aptNotes}</p>
-//             </div>
-//             <div className="flex flex-col">
-//                 <span className="text-sm ml-4">{appointments.aptDate}</span>
-//                 <span className="text-sm ml-4 text-gray-600 font-semibold">Slot: {appointments.aptSlot}</span>
-//             </div>
-//         </li>
-//     );
-// };
-
-// export default AppointmentImfo;
-
-
-import React from "react";
 import { BiTrash } from "react-icons/bi";
-
-// Helper function to format the date
 const formatDate = (dateString) => {
-    const dateObj = new Date(dateString); // Convert string to Date object
+    const dateObj = new Date(dateString);
     const day = dateObj.getDate();
     const month = dateObj.toLocaleString("default", { month: "long" });
     const year = dateObj.getFullYear();
 
-    // Add appropriate suffix to day
     const daySuffix = (day) => {
         if (day % 10 === 1 && day !== 11) return "st";
         if (day % 10 === 2 && day !== 12) return "nd";
@@ -71,12 +35,10 @@ const AppointmentInfo = ({ appointments, onDeleteAppointment }) => {
                 <p className="text-sm mt-2 text-gray-600">{appointments?.aptNotes}</p>
             </div>
             <div className="flex flex-col">
-                {/* Format the appointment date */}
                 <span className="md:text-sm text-[10px] ml-4">
                     {formatDate(appointments?.aptDate)}
                 </span>
                 <span className="md:text-sm text-[10px] ml-4 text-gray-600 font-semibold">
-                    {/* <span className="md:block hidden"> Slot:</span> */}
                     {appointments?.aptSlot}
                 </span>
             </div>

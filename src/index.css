@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 120px;
+    background-color: gainsboro;
+}
+
+body {
+    min-width: 320px;
+}
